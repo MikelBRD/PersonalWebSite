@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      >
+<h:head>
+	<title>M Login</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <h:outputStylesheet library="css" name="loginstyle.css"></h:outputStylesheet>
+  
+</h:head>
+
+
+<h:body>
+<div class="container">
+ <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <h:graphicImage library="images" id="profile-img" class="profile-img-card" name="Loginicon.png" />
+            
+            <p id="profile-name" class="profile-name-card"></p>
+            <h:form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <h:inputText id="inputEmail" a:type="email"  value="#{login.user}" class="form-control" a:placeholder="Email address"></h:inputText>
+                <h:inputSecret id="inputPassword"   class="form-control" a:placeholder="Password" value="#{login.pwd}"></h:inputSecret>
+                <h:commandButton class="btn btn-lg btn-primary btn-block btn-signin" a:type="submit" value="Sign in" action="#{login.validateUsernamePassword}"/>
+               
+            </h:form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Reset
+            </a>
+        </div><!-- /card-container -->
+
+             <div class="row">
+                        <div class="col-md-6 col-md-offset-3 text-center">
+                            <p class="copyright" style="color:white;">* Mikel Berdufi *</p>
+                        </div><!-- End .col-md-6 -->
+             </div><!-- End .row -->
+               
+            
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<h:outputScript name="jscolor/jscolor.js" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</h:body>
+
+</html>
